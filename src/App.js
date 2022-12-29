@@ -10,13 +10,23 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 const App = () => {
-	return <div className="overflow-hidden">
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-      </Routes>
-    </Router>
-  </div>;
+	return (
+		<div className="overflow-hidden">
+			<Router>
+				<Header />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route
+						path="/Product/:id"
+						element={<ProductDetails />}
+					/>
+					<Route path="/" element={<Home />} />
+				</Routes>
+				<Sidebar />
+				<Footer />
+			</Router>
+		</div>
+	);
 };
 
 export default App;
