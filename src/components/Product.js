@@ -6,7 +6,7 @@ import { CartContext } from "../contexts/CartContext";
 
 const Product = ({ product }) => {
 	const { addToCart } = useContext(CartContext);
-	console.log(product);
+/* 	console.log(product); */
 	//destructure product
 	const { id, image, category, title, price } = product;
 
@@ -25,10 +25,10 @@ const Product = ({ product }) => {
 				</div>
 				{/* button */}
 				<div
-					onClick={addToCart}
+					
 					className="absolute top-6 -right-11 group-hover:right-5 bg-red-500 p2 flex flex-col items-center justify-center gap-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300"
 				>
-					<button>
+					<button onClick={()=>addToCart(product ,id)}>
 						<div className="flex justify-center items-center text-withe w-12 h-12">
 							<BsPlus className="text-3x1" />
 						</div>
