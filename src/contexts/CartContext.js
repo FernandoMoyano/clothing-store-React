@@ -6,17 +6,14 @@ const CartProvider = ({ children }) => {
 	//cart state
 	const [cart, setCart] = useState([]);
 
-
 	//ADD TO CART
 	const addToCart = (product, id) => {
 		const newItem = { ...product, amount: 1 };
-
 
 		//Chek if the item is already in the cart
 		const cartItem = cart.find((item) => {
 			return item.id === id;
 		});
-
 
 		//If the product is already in the cart, add only the amount, otherwise add it
 		if (cartItem) {
@@ -34,12 +31,19 @@ const CartProvider = ({ children }) => {
 			setCart([...cart, newItem]);
 		}
 	};
-	console.log(cart);
 
+	//REMOVE FROM CART
+	const removeFromCart = (id) => {
+		const newCart = cart.filter((item) => {
+			return item.id !== id;
+		});
+		setCart(newCart);
+	};
 
-
-
-
-	return <CartContext.Provider value={{ cart, addToCart }}>{children}</CartContext.Provider>;
+	return (
+		<CartContext.Provider value={{ cart, removeFromCart, addToCart }}>
+			{children}
+		</CartContext.Provider>
+	);
 };
 export default CartProvider;
