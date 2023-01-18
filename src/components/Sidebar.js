@@ -40,8 +40,20 @@ const Sidebar = () => {
 			</div>
 			<div>
 				{cart.map((item) => {
-					return <CartItem item={item} key={item.id} />
+					return <CartItem item={item} key={item.id} />;
 				})}
+			</div>
+			<div>
+				<div className="bg-red-200 flex w-full justify-between items-center">
+					{/* total */}
+					<div>
+						<span>Total:</span>
+					</div>
+					{/* clear cart icon */}
+					<div className="cursor-pointer py-4 bg-red-600 text-white w-12 h-12 flex justify-center items-center text-xl">
+						<FiTrash2 />
+					</div>
+				</div>
 			</div>
 		</div>
 	);
