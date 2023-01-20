@@ -41,10 +41,48 @@ const CartProvider = ({ children }) => {
 	};
 
 	//CLEAR CART
-	
+
+	const clearCart = () => {
+		setCart([]);
+	};
+
+	//INCREASE AMOUNT
+	const increaseAmount = (id) => {
+		const cartItem = cart.find((item) => item.id === id);
+		addToCart(cartItem, id);
+	};
+
+	//DECREASE AMOUNT
+	const decreaseAmount = (id) => {
+		const cartItem = cart.find((item) => {
+			return item.id === id;
+		});
+		if (cartItem) {
+			const newCart = cart.map((item) => {
+				if (item.id === id) {
+					return { ...item, amount: cartItem.amount - 1 };
+				} else {
+					return item;
+				}
+			});
+			setCart(newCart);
+		}
+		if (cartItem.amount < 2) {
+			removeFromCart(id);
+		}
+	};
 
 	return (
-		<CartContext.Provider value={{ cart, removeFromCart, addToCart }}>
+		<CartContext.Provider
+			value={{
+				cart,
+				clearCart,
+				removeFromCart,
+				addToCart,
+				increaseAmount,
+				decreaseAmount,
+			}}
+		>
 			{children}
 		</CartContext.Provider>
 	);
