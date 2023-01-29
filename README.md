@@ -19,5 +19,9 @@
 ## _Commands_
 
 ``` cmd
-git clone 
+git clone https://github.com/FernandoMoyano/clothing-store-react.git
+```
+
+``` cmd
+npm init
 ```
