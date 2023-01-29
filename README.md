@@ -25,5 +25,5 @@ git clone https://github.com/FernandoMoyano/clothing-store-react.git
 
 ``` cmd
 npm init
-install dependencies
+//install dependencies
 ```
