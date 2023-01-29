@@ -20,8 +20,10 @@
 
 ``` cmd
 git clone https://github.com/FernandoMoyano/clothing-store-react.git
+//clone repository
 ```
 
 ``` cmd
 npm init
+install dependencies
 ```
