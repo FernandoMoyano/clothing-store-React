@@ -49,3 +49,13 @@ npm start
   },
 ```
 
+### _devdependencies_
+``` javascript
+"devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "react-icons": "^4.6.0",
+    "react-router-dom": "^6.4.3",
+    "tailwindcss": "^3.2.4"
+  }
+```
