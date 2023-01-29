@@ -33,6 +33,16 @@ npm start
 //start the project
 ```
 
+## _Scripts_
+``` javascript
+ "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+```
+
 ## _Dependencies_
 
 ### _dependencies_
