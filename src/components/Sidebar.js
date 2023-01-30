@@ -14,7 +14,7 @@ import { CartContext } from "../contexts/CartContext";
 const Sidebar = () => {
 	// SidebarContext functions
 	const { isOpen, handleClose } = useContext(SidebarContext);
-	const { cart, clearCart, total } = useContext(CartContext);
+	const { cart, clearCart, total, itemAmount } = useContext(CartContext);
 
 	// CartContext functions
 	/* 	console.log(useContext(CartContext)); */
@@ -29,7 +29,7 @@ const Sidebar = () => {
 					className="uppercase text-sm 
 				font-semibold"
 				>
-					Shopping Bag (0)
+					Shopping Bag ({itemAmount})
 				</div>
 				<div
 					onClick={handleClose}
