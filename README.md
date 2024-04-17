@@ -3,8 +3,6 @@
 ## _Description_
 >This is an e-commerce site, which implements functions such as adding a product to the cart, removing it, adding a product by product, setting the final price, emptying the cart completely. This eCommerce is built with the most important react hooks like useState, useEffect, useParams, useContext and is used for Tailwind styles.
 
-## _View Deployment_
-🔗[Go to the Site](https://silver-sable-b0e094.netlify.app/)
 
 ## _Languages_
 
